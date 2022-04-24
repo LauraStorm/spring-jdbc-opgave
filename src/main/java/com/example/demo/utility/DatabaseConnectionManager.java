@@ -33,9 +33,11 @@ public class DatabaseConnectionManager {
             username = System.getenv("db.username");
             password = System.getenv("db.password");
             conn = DriverManager.getConnection(url, username, password);
+            System.out.println("We have a connection to DB");
         }
 
         catch(SQLException e){
+            System.out.println("something went wrong with the DB connection");
             e.printStackTrace();
         }
         return conn;

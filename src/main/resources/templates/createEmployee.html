@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>create Employee</title>
+    <link rel="stylesheet" th:href="@{style.css}"  type="text/css">
+</head>
+<body>
+
+<section class="content">
+  <h1>Create a new employee</h1>
+    <h3>(*) = skal udfyldes</h3>
+  <form action="/create-new-employee" method="POST">
+    <!-- action er refferes til vores controller class hvor vi benytter @PostMapping("/create-new-employee") metoden: createNewEmployee -->
+    <label for="employeeName">Enter First Name (*):</label><br>
+    <input id="employeeName" type="text" name="employeeName">
+      <br><br>
+      <label for="job">Enter Job (*):</label><br>
+      <input type="text" id="job" name="job">
+      <br><br>
+      <label for="manager">Manager:</label><br>
+      <input type="number" id="manager" name="manager">
+      <br><br>
+      <label for="hireDate">Enter The date of hire (*):</label><br>
+      <input type="date" id="hireDate" name="hireDate">
+      <br><br>
+      <label for="salary">Enter Salay (*):</label><br>
+      <input type="number" id="salary" name="salary">
+      <br><br>
+      <label for="commission">Commission:</label><br>
+      <input type="number" id="commission" name="commission">
+      <br><br>
+      <label for="commission">Choose Department number(*):</label><br>
+
+        <li> 10 = ACCOUNTING - New York</li>
+        <li> 20 = RESEARCH - Dallas</li>
+        <li> 30 = SALES - Chicago</li>
+        <li> 40 = OPERATION - Boston</li>
+      <input type="number" id="departmentNo" name="departmentNo">
+     <br><br>
+      <input type="submit"/>
+  </form>
+
+</section>
+
+</body>
+</html>

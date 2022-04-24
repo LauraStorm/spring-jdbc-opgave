@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+    <link rel="stylesheet" th:href="@{style.css}"  type="text/css">
+</head>
+<body>
+    <h1>An overview of our Employees</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Salary</th>
+                <th>Full description (toString)</th>
+
+            </tr>
+             <tr th:each="employee : ${employees}">
+                 <td th:text="${employee.getName()}">Name</td>
+                 <td th:text="${employee.getJob()}">Job</td>
+                 <td th:text="${employee.getSalary()}">Salary</td>
+                 <td th:text="${employee}">toString </td>
+            </tr>
+        </table>
+
+</body>
+</html>
