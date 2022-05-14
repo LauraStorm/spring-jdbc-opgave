@@ -15,7 +15,6 @@ public class EmployeeRepository implements CRUDInterface <Employee> {
     @Override
     public boolean create(Employee entity) {
 
-
         try {
             Connection conn = DatabaseConnectionManager.getConnection();
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO employees (employee_name,job,manager,hiredate,salary,commission,department_number)" +
